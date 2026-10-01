@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Security Checklist</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" />
+    
+    <style>
+         body{
+            -webkit-print-color-adjust: exact !important;
+            print-color-adjust: exact !important;
+        }
+        
+        nav{
+            padding: 10px 0;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+        }
+
+        a{
+            color: #808080;
+        }
+
+        .logo{
+            width: 220px;
+        }
+
+        .logo img{
+            width: 100%;
+            height: 100%;
+        }
+
+        .contact{
+            box-shadow: 0 0 3px rgb(255, 0, 0);
+            border-radius: 5px;
+            padding: 15px;
+            font-size: .90rem;
+            position: relative;
+        }
+
+        .contact div{
+            margin: 5px;
+        }
+
+        hr{
+            margin: 10px 0 25px 0;
+        }
+
+        table{
+            margin: 0 auto;
+            border-collapse: collapse;
+            font-size: .70rem;
+        }
+
+        table input{
+            border: none;
+            font-size: .70rem;
+            text-transform: uppercase;
+            vertical-align: middle;
+        }
+
+        table td{
+            border: 1px solid #000000;
+        }
+
+        .graphics{
+            display: grid;
+            grid-template-columns: repeat(2,250px);
+            grid-template-rows: repeat(2,150px);
+            gap: 10px;
+        }
+
+        .placeholder{
+            width: 100%;
+            height: 100%;
+            border-radius: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            color: gray;
+            overflow: hidden;
+        }
+
+        footer img{
+            border-radius: 5px;
+        }
+
+        footer{
+            margin: 10px;
+        }
+
+        .petrol{
+            padding: 0 3px; 
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            margin: 10px 0;
+        }
+
+        .petrol span{
+            padding-bottom:3em;
+        }
+
+        .boxes{
+           display: grid;
+           grid-template-columns: repeat(2,40px);
+           gap: 10px;
+        }
+
+        .boxes div{
+            width: 30px;
+            height: 30px;
+            border-radius: 5px;
+            padding: 2px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .check{
+            position: absolute;
+            top: -16px;
+            background-color: rgb(107, 144, 177);
+            right: 10px;
+            padding: .3rem;
+            border-radius: 3px;
+            color: #ffffff;
+            text-transform:uppercase;
+            font-size: .65rem;
+        }
+
+        @media print {
+            table td, th{
+                border: 0.2pt solid rgb(107, 144, 177) !important;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">
+            <img src="big_5_logo_new.png" alt="" id="printPDF">
+        </div>
+
+        <div class="contact">
+            <div>
+                <i class="fa-solid fa-phone"></i> 
+                <label>081 025 5046</label>
+            </div>
+
+            <div>
+                <i class="fa-solid fa-globe"></i> <a href="https://www.bigfive.durban">www.bigfive.durban</a>
+            </div>
+            
+            <div>
+                <i class="fa-solid fa-location-dot"></i> <label>1 Intersite Ave, Springfield park,  Durban</label>
+            </div>
+
+            <div class="check">Security Checklist</div>
+        </div>
+    </nav>
+
+    <hr>
+
+    <div class="container">
+        <table>
+            <tr>
+                <td>DATE</td>
+                <td><input type="datetime-local"></td>
+                <td>COLOUR</td>
+                <td><input type="color" style="background-color: transparent;"></td>
+            </tr>
+
+            <tr>
+                <td>MAKE & MODEL</td>
+                <td><input type="text"></td>
+                <td>MILEAGE</td>
+                <td><input type="text"></td>
+            </tr>
+
+            <tr>
+                <td>REG NUMBER</td>
+                <td><input type="text"></td>
+                <td>INSURER</td>
+                <td><input type="text"></td>
+            </tr>
+
+            <tr>
+                <td>WARRANTY?? (YES/NO)</td>
+                <td><input type="text"></td>
+                <td>CLAIN: NO</td>
+                <td><input type="text"></td>
+            </tr>
+
+            <tr>
+                <td>KEYS</td>
+                <td><input type="checkbox"> <input type="text"></td>
+                <td>RADIO STATION</td>
+                <td><input type="text"></td>
+            </tr>
+
+            <tr>
+                <td>BATTERY MAKE</td>
+                <td><input type="text"></td>
+                <td>TYRE MAKE</td>
+                <td> <input type="text"></td>
+            </tr>
+
+            <tr>
+                <td>ADDITIONAL SOUND</td>
+                <td><input type="checkbox"> <input type="text"></td>
+                <td>MUD FLAPS</td>
+                <td><input type="checkbox"> <input type="text"></td>
+            </tr>
+
+            <tr>
+                <td>AERIAL</td>
+                <td><input type="checkbox"> <input type="text"></td>
+                <td>LIGHTER</td>
+                <td><input type="checkbox"></td>
+            </tr>
+
+            <tr>
+                <td>SPARE WHEEL</td>
+                <td><input type="checkbox"> <input type="text"></td>
+                <td>HOOTER</td>
+                <td><input type="checkbox"> <input type="text"></td>
+            </tr>
+
+            <tr>
+                <td>JACK</td>
+                <td><input type="checkbox"> <input type="text"></td>
+                <td>AIRCON</td>
+                <td><input type="checkbox"> <input type="text"></td>
+            </tr>
+
+            <tr>
+                <td>WHEEL SPANNER</td>
+                <td><input type="checkbox"> <input type="text"></td>
+                <td>WINDSCREEN</td>
+                <td><input type="checkbox"> <input type="text"></td>
+            </tr>
+
+            <tr>
+                <td>HAZARD SIGN</td>
+                <td><input type="checkbox"> <input type="text"></td>
+                <td>LOCK NUTS</td>
+                <td><input type="checkbox"> <input type="text"></td>
+            </tr>
+
+            <tr>
+                <td>TOW HOOK</td>
+                <td><input type="checkbox"> <input type="text"></td>
+                <td>TOW COVER</td>
+                <td><input type="checkbox"><input type="text"></td>
+            </tr>
+
+            <tr>
+                <td>TOOLKIT</td>
+                <td><input type="checkbox"> <input type="text"></td>
+                <td>REAR GLASS</td>
+                <td><input type="checkbox"> <input type="text"></td>
+            </tr>
+
+            <tr>
+                <td>LOOSE MATS</td>
+                <td><input type="checkbox"> <input type="text"></td>
+                <td>WIPERS</td>
+                <td><input type="checkbox"> <input type="text"></td>
+            </tr>
+
+            <tr>
+                <td>HUB CAPS</td>
+                <td><input type="checkbox"> <input type="text"></td>
+                <td>ELECTRIC WINDOWS</td>
+                <td><input type="checkbox"> <input type="text"></td>
+            </tr>
+
+            <tr>
+                <td>MAG WHEELS (RIMS)</td>
+                <td><input type="checkbox"> <input type="text"></td>
+                <td>CENTR. LOCKING</td>
+                <td><input type="checkbox"> <input type="text"></td>
+            </tr>
+
+            <tr>
+                <td>CD, SHUTTLE</td>
+                <td><input type="checkbox"></td>
+                <td>FOG LIGHTS</td>
+                <td><input type="checkbox"> <input type="text"></td>
+            </tr>
+
+            <tr>
+                <td>FRONT SPEAKERS</td>
+                <td><input type="checkbox"> <input type="text"></td>
+                <td>HEAD LIGHTS</td>
+                <td><input type="checkbox"> <input type="text"></td>
+            </tr>
+
+            <tr>
+                <td>BACK SPEAKERS</td>
+                <td><input type="checkbox"> <input type="text"></td>
+                <td>BRAKE LIGHTS</td>
+                <td><input type="checkbox"> <input type="text"></td>
+            </tr>
+
+            <tr>
+                <td>LICENSE DISC DATE</td>
+                <td><input type="checkbox"> <input type="text"></td>
+                <td>REVERSE LIGHTS</td>
+                <td><input type="checkbox"> <input type="text"></td>
+            </tr>
+
+            <tr>
+                <td>SEAT COVERS</td>
+                <td><input type="checkbox"> <input type="text"></td>
+                <td>HAZZARDS</td>
+                <td><input type="checkbox"></td>
+            </tr>
+
+            <tr>
+                <td>CD FACE / DISPLAY PANEL</td>
+                <td><input type="checkbox"> <input type="text"></td>
+                <td>ROOF RACK</td>
+                <td><input type="checkbox"></td>
+            </tr>
+
+            <tr>
+                <td>LOOSE VALUABLES</td>
+                <td><input type="checkbox"> <input type="text"></td>
+                <td>ROOF RAILS</td>
+                <td><input type="checkbox"> <input type="text"></td>
+            </tr>
+
+            <tr>
+                <td>SUN VISORS</td>
+                <td><input type="checkbox"> <input type="text"></td>
+                <td>WINDOW WASHER</td>
+                <td><input type="checkbox"><input type="text"></td>
+            </tr>
+
+            <tr>
+                <td>INTERIO LIGHTS</td>
+                <td><input type="checkbox"> <input type="text"></td>
+                <td>REAR VIEW MIRROR</td>
+                <td><input type="checkbox"><input type="text"></td>
+            </tr>
+
+             <tr>
+                <td>PDC</td>
+                <td colspan="3"><input type="checkbox"> <input type="text"></td>
+            </tr>
+
+            <tr>
+                <td>FUEL GAUGE</td>
+                <td colspan="3"><input type="range" min = "0" max = "100" style="width: 200px; accent-color: #000;" value="0"></td>  
+            </tr>
+
+            <tr>
+                <td>NOTES</td>
+                <td colspan="3"><textarea name="" id="" cols="70"></textarea></td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- <script>
+        const fileInput = document.getElementById("fileInput");
+        let currentPlaceholder = null;
+
+        function attachImageUpload(element){
+            element.addEventListener("click", function(){
+                currentPlaceholder = element;
+                fileInput.click();
+            });
+        }
+
+        document.querySelectorAll(".placeholder").forEach(attachImageUpload);
+        fileInput.addEventListener("change", function(){
+            const file = this.files[0];
+            if(!file || !currentPlaceholder) return;
+
+            const reader = new FileReader();
+
+            reader.onload = function(e){
+                currentPlaceholder.innerHTML = `<img src ="${e.target.result}" style = "width:100%; height:100%; object-fit:cover;">`;
+            };
+            
+            reader.readAsDataURL(file);
+            this.value = "";
+        }); -->
+
+            
+    <script>
+
+        let printPDF = document.getElementById("printPDF");
+
+        printPDF.addEventListener("click", function(){
+            window.print();
+        })
+
+    </script>
+
+</body>
+</html>
